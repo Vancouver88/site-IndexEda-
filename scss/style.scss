@@ -1,0 +1,128 @@
+@import "reset";
+
+html,
+body {
+	height     : 100%;
+	font-family: "Roboto", sans-serif;
+	color      : #000000;
+	font-weight: 500;
+	line-height: 1;
+	font-size  : 16px;
+}
+
+/*----------------------------------------------*/
+
+//Основные параметры обертки и ограничивающего контейнера
+
+.wrapper {
+	min-height    : 100%;
+	overflow      : hidden;
+	display       : flex;
+	flex-direction: column;
+}
+
+._container {
+	max-width: 1200px;
+	padding  : 0 15px;
+	margin   : 0 auto;
+}
+
+/*---PAGE----------------------------------------*/
+
+.page {
+	flex: 1 1 auto;
+}
+
+/*---HEADER---------------------------------------*/
+
+.header {
+
+	&__container {
+		display    : flex;
+		align-items: center;
+		padding    : 9px 0;
+	}
+
+	&__logo {
+		display: flex;
+	}
+
+	&__search {
+		margin       : 0 0 0 76px;
+		background   : rgba(238, 238, 238, 0.71);
+		border-radius: 10px;
+		display      : flex;
+		flex         : 0 1 620px;
+		padding      : 13px 18px 13px 20px;
+
+		&-input {
+			width     : 100%;
+			background: transparent;
+
+			&::placeholder {
+				font-weight: 400;
+				line-height: 144%;
+				color      : #57565B;
+			}
+		}
+
+		&-btn {
+			padding: 10px 15px;
+			margin : -10px -15px;
+		}
+	}
+
+	&__rigth-menu {
+		margin-left: auto;
+	}
+}
+
+.rigth-menu {
+	display    : flex;
+	align-items: center;
+
+	&__btn {
+
+		&:not(:last-child) {
+			margin: 0 31px 0 0;
+		}
+	}
+}
+
+.login {
+
+	&__btn {
+		background   : #EBEBEB;
+		border-radius: 50px;
+		font-weight  : 400;
+		font-size    : 14px;
+		line-height  : 114%;
+		padding      : 16px 30px;
+	}
+}
+
+.cart {
+
+	&__btn {
+		background     : #F66A15;
+		border-radius  : 50%;
+		min-height     : 49px;
+		min-width      : 49px;
+		display        : flex;
+		align-items    : center;
+		justify-content: center;
+		position       : relative;
+	}
+
+	&__btn-count {
+		position     : absolute;
+		background   : #FFAF19;
+		border-radius: 50%;
+		padding      : 5px;
+		font-weight  : 400;
+		font-size    : 8px;
+		line-height  : 112%;
+		right        : -2px;
+		bottom       : -4px;
+	}
+}
